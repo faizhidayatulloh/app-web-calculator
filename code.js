@@ -1,31 +1,9 @@
-//bikin Array bulan
-const namabulan = [
-    'Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus',
-    'September','Oktober','November','Desember'
-];
-const namaHari = [
-    'Minggu','Senin','Selasa','Rabu','Kamis',"Jum'at",'Sabtu'
-]
-
-
-
-
-
-let layar = document.getElementById('jam');
-let atas = layar.getElementsByTagName('h1');
-let bawah = layar.getElementsByTagName('p');
-
-function tampil() {
-    const waktu = new Date();
-    const jam = waktu.getHours();
-    const menit = waktu.getMinutes();
-    const detik = waktu.getSeconds();
-    const tahun = waktu.getFullYear();
-    const bulan = waktu.getMonth();
-    const tanggal = waktu.getDate();
-    const hari = waktu.getDay();
-    atas[0].innerHTML =jam+" : "+menit+" : "+ detik;
-    bawah[0].innerHTML = namaHari[hari]+" "+" "+tanggal+" - "+namabulan[bulan]+" - "+tahun
+let kata;
+kata = window.prompt('Hai, siapa nama kamu?    \nKetika nama anda :');
+if ( kata == ""|| kata == null ) {
+    kata = 'tolong ketik nama anda, dan tekan ok !'
+    document.getElementById('faiz').innerHTML = kata;
+} else {
+    document.getElementById('faiz').innerHTML =`halo ${kata}, bagaimana kabar anda hari ini? kapan menikah? kapan punya anak?
+    kapan masuk surga ?`
 }
-
-setInterval(tampil)
