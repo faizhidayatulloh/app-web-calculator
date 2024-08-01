@@ -15,13 +15,13 @@ body {
     width: 100%;
     text-align: right;
     font-size: 50px;
-    padding: 20px;
+    padding:5%;
     background-color: yellow;
     border: 10px solid black;
     border-radius: 5px;
 }
 .wadahTombol {
-    padding: 20px;
+    border: 10px solid black;
     display: flex;
     flex-wrap: wrap;
     position: fixed;
@@ -39,4 +39,6 @@ button {
     font-weight: bold;
     font-size: 30px;
 }
-button:active 
+button:active {
+    background-color: lightgreen;
+}
