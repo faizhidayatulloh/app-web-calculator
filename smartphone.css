@@ -1,7 +1,7 @@
 * {box-sizing: border-box;}
 body {
     margin: 0;
-    background-color: black;
+    background-color: white;
 }
 .wadahLayar {
     display: flex;
@@ -15,13 +15,11 @@ body {
     width: 100%;
     text-align: right;
     font-size: 50px;
-    padding:5%;
     background-color: yellow;
-    border: 10px solid black;
-    border-radius: 5px;
+    border: 9px solid blue;
 }
 .wadahTombol {
-    border: 10px solid black;
+    border: 9px solid blue;
     display: flex;
     flex-wrap: wrap;
     position: fixed;
