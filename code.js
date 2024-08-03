@@ -12,7 +12,8 @@ function cari(position) {
     .then(response => response.json())
     .then(data => {
     const address = data.display_name;
-    document.getElementById('alin').innerHTML = `alamat : ${address}`
+    document.getElementById('alin').innerHTML = `<b>Posisi anda berada di </b>: ${address}<br/><br/>Untuk melihat codenya 
+    seperti apa, hubungi kami di : <b>faizulurrosyad433@gmail.com</b>`
   })
   .catch(error => console.error('Error:', error));
 
