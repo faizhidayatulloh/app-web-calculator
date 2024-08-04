@@ -1,12 +1,13 @@
 function showLocation (){
-    navigator.geolocation.getCurrentPosition(cari);
+    navigator.geolocation.watchPosition(cari);
 }
 function cari(position) {
     let x = document.getElementById('faiz');
     let lintang = position.coords.latitude;
     let bujur = position.coords.longitude;
+    let akurasi = position.coords.accuracy;
     x.innerHTML = `garis lintang : ${lintang}<br/>
-    garis bujur : ${bujur}`
+    garis bujur : ${bujur}<br/>akurasi : ${akurasi}`
     const url = `https://nominatim.openstreetmap.org/reverse?lat=${lintang}&lon=${bujur}&format=json`;
     fetch(url)
     .then(response => response.json())
