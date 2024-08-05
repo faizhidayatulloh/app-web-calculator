@@ -1,8 +1,6 @@
 //menulis di layar
 function tulis(value) {
     document.getElementById('layar').value+=value;
-    const obj = document.getElementById('layar').value;
-    
 }
 //bersihkan layar
 function bersihkan() {
