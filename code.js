@@ -2,10 +2,7 @@
 function tulis(value) {
     document.getElementById('layar').value+=value;
     const obj = document.getElementById('layar').value;
-    if (obj[0]=="0" && obj[1]=="0") {
-        let hasil = obj.replace("0","");
-        document.getElementById('layar').value = hasil;
-    }
+    
 }
 //bersihkan layar
 function bersihkan() {
