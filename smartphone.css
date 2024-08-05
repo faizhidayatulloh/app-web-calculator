@@ -14,10 +14,8 @@ body {
 .layar {
     width: 100%;
     text-align: right;
-    font-size: 50px;
     background-color:  whitesmoke;
     border: 9px solid gray;
-    overflow: scroll;
 }
 .wadahTombol {
     border: 9px solid gray;

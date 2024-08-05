@@ -1,8 +1,33 @@
 //menulis di layar
 function tulis(value) {
     document.getElementById('layar').value+=value;
+    const obj = document.getElementById('layar').value;
+    if (obj[0]=="0" && obj[1]=="0") {
+        let hasil = obj.replace("0","");
+        document.getElementById('layar').value = hasil;
+    }
 }
 //bersihkan layar
 function bersihkan() {
     document.getElementById('layar').value ="";
+}
+//hapus satu layur
+function koreksi () {
+    let obj = document.getElementById('layar').value;
+    let satu = obj.replace(/\s/g,"");
+    let dua = satu.split("");
+    dua.pop();
+    let hasil = dua.toString();
+    let x = /,/g
+    let hasil2 = hasil.replace(x,"");
+    document.getElementById('layar').value = hasil2;
+}
+function hitung() {
+    let obj = document.getElementById('layar').value;
+    try {
+        let hasil = eval(obj);
+        document.getElementById('layar').value = hasil;
+    } catch (e) {
+        document.getElementById('layar').value = "error"
+    }
 }
